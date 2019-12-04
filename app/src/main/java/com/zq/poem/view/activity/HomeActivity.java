@@ -199,7 +199,7 @@ public class HomeActivity extends AppCompatActivity {
                     public void run() {
 
                         Bitmap bitmap = capture(HomeActivity.this);
-                        prob.setVisibility(View.VISIBLE);
+                        //prob.setVisibility(View.VISIBLE);
                         PicUtil.showPic(HomeActivity.this, bitmap);
                         String path = PicUtil.saveBitmap(bitmap);
                         Toast.makeText(HomeActivity.this, "已保存到本地", Toast.LENGTH_SHORT).show();
