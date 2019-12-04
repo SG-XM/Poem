@@ -681,7 +681,9 @@ MainViewModel.getInstance().getArcrosticData().observe(this, (string) -> {
 ---
 ## License
 ```
-Script is licensed under MIT license with one exception: Do not create a public WordPress plugin based on it, as I will develop it. If you need to use it for a public WordPress plugin right now, please ask me by email first. Thanks!
+Script is licensed under MIT license with one exception:
+Do not create a public WordPress plugin based on it, as I will develop it. 
+If you need to use it for a public WordPress plugin right now, please ask me by email first. Thanks!
 
 Attribution is not required, but much appreciated, especially if you’re making a product for developers.
 ```
