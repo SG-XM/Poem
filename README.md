@@ -1,6 +1,7 @@
 
 `Java` `Android` `MVVM` `RNN`
 
+>很不幸截止到该次 update 时，raw.github.com 无法正常访问，被墙，README 内预览图无法显示
 
 ### 一、开发环境
 
