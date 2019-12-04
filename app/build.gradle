@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.zq.poem"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets { main { jni.srcDirs = ['src/main/jni', 'src/main/jniLibs/'] } }
+    compileOptions {
+        sourceCompatibility var
+        targetCompatibility '1.8'
+    }
+    productFlavors {
+    }
+    aaptOptions {
+        noCompress "tflite"
+        noCompress "lite"
+    }
+
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.github.GrenderG:Toasty:1.4.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.0.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    implementation "com.orhanobut:hawk:2.0.1"
+    implementation "org.jetbrains.anko:anko-commons:0.10.8"
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation group: 'com.zhihu.android', name: 'matisse', version: '0.5.2-beta4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'cn.edu.twt.retrox:recyclerviewdsl:1.1.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.github.GrenderG:Toasty:1.4.2'
+    implementation 'org.apache.commons:commons-lang3:3.9'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    api 'org.jetbrains.anko:anko-sdk25:0.10.8' // sdk19, sdk21, sdk23 are also available
+    api 'org.jetbrains.anko:anko-support-v4:0.10.8'
+    api "org.jetbrains.anko:anko-design:0.10.8"
+    api "org.jetbrains.anko:anko-constraint-layout:0.10.8"
+}
+
+

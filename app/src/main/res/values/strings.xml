@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">简札</string>
+
+    <string name="notifyTitle">提示</string>
+    <string name="gpsNotifyMsg">当前手机扫描蓝牙需要打开定位功能。</string>
+    <string name="setting">前往设置</string>
+    <string name="cancel">取消</string>
+    <string name="photo">拍照</string>
+    <string name="your_photo">your photo</string>
+    <string name="back">返回</string>
+    <string name="bind_num">绑定号码：</string>
+    <string name="user_name">可期</string>
+
+</resources>
